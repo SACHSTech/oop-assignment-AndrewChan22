@@ -17,4 +17,9 @@ public class Laptop extends PersonalComputer {
         return hasWebcam;
     }
 
+    public boolean getTouchscreen() {
+        return isTouchscreen;
+    }
+
+    
 }
