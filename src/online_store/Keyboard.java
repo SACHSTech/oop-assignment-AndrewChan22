@@ -10,5 +10,8 @@ public class Keyboard extends Products {
         this.keyboardLayout = keyboardLayout;
     }
 
-    
+    public int getSizePercentage() {
+        return sizePercentage;
+    }
+
 }
