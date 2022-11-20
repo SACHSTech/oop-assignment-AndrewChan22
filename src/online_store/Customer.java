@@ -12,4 +12,15 @@ public class Customer {
         this.addr = addr;
     }
 
+    public String getFirstName() {
+        return fName;
+    }
+
+    public String getLastName() {
+        return lName;
+    }
+
+    public String getAddress() {
+        return this.addr.toString();
+    }
 }
