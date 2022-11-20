@@ -36,6 +36,6 @@ public class Laptop extends PersonalComputer {
             System.out.println("This laptop has touchscreen");
         }
 
-        System.out.println("Weight of laptop: " + weight);
+        System.out.println("Weight of laptop: " + weight + " lb(s)");
     }
 }

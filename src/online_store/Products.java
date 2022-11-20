@@ -28,5 +28,9 @@ public abstract class Products {
         this.amount = newAmount;
     }
 
+    public String toString() {
+        return productName + ": $" + price;
+    }
+
     public abstract void getFeatures();
 }
