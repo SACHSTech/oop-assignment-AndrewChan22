@@ -25,4 +25,17 @@ public class Laptop extends PersonalComputer {
         return weight;
     }
 
+    public void getFeatures() {
+        if (hasWebcam) {
+            System.out.println("This laptop has a webcam");
+        } else {
+            System.out.println("Webcam not included");
+        }
+
+        if (isTouchscreen) {
+            System.out.println("This laptop has touchscreen");
+        }
+
+        System.out.println("Weight of laptop: " + weight);
+    }
 }
