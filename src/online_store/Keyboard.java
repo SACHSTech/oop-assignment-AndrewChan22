@@ -18,4 +18,24 @@ public class Keyboard extends Products {
         return keyboardLayout;
     }
 
+    public void getFeatures() {
+        if (sizePercentage == 100) {
+            System.out.println("Size: full-sized (100%)");
+        } 
+
+        else if (sizePercentage == 96) {
+            System.out.println("Size: compact full-sized (96%)");
+        }
+        else if (sizePercentage == 80) {
+            System.out.println("Size: Tenkeyless (80%)");
+        }
+        else if (sizePercentage == 65) {
+            System.out.println("Size: Compact (65%)");
+        }
+        else {
+            System.out.println("Size percentage " + sizePercentage);
+        }
+
+        System.out.println("Keyboard layout " + keyboardLayout);
+    }
 }
