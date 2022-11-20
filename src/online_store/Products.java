@@ -20,4 +20,11 @@ public class Products {
         return productName;
     }
     
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int newAmount) {
+        this.amount = newAmount;
+    }
 }
