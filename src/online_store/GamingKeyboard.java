@@ -10,5 +10,8 @@ public class GamingKeyboard extends Keyboard {
         this.backlitLighting = backlitLighting;
     }
 
+    public String getKeyswitches() {
+        return keyswitches;
+    }
     
  }
