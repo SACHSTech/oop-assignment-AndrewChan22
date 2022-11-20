@@ -20,5 +20,8 @@ public class ShoppingCart {
         return totalCost;
     }
 
+    public ArrayList<Products> getProducts() {
+        return products;
+    }
     
 }
