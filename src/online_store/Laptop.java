@@ -21,5 +21,8 @@ public class Laptop extends PersonalComputer {
         return isTouchscreen;
     }
 
-    
+    public double getWeight() {
+        return weight;
+    }
+
 }
