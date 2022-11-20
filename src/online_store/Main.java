@@ -69,15 +69,172 @@ public class Main {
             String option = key.readLine();
 
             if (option.equalsIgnoreCase("Buy")) {
-                System.out.println("Here are the follow products:");
+                System.out.println("Here are the following available products:");
                 System.out.println("");
                 for (int i = 0; i < currentCart.size(); i++) {
                     System.out.println(currentCart.get(i));
                 }
 
-                 
+                System.out.println("What are you looking to purchase?: ");
+                String purchase = key.readLine();
+
+                System.out.println("How many would you like to purchase?: ");
+                int amount = Integer.parseInt(key.readLine());
+
+                if (amount > 0) {
+
+                    if (purchase.equalsIgnoreCase("Surface laptop 4")) {
+                    
+                        surfaceLaptop.setAmount(surfaceLaptop.getAmount() + amount);
+                        System.out.println(amount + " items with the following name " + purchase + " were successfully added to cart");
+                        
+                    }
+    
+                    else if (purchase.equalsIgnoreCase("ASUS VivoBook 15")) {
+                                    
+                        vivoBook.setAmount(vivoBook.getAmount() + amount);
+                        System.out.println(amount + " items with the following name " + purchase + " were successfully added to cart");
+                    }
+    
+                    else if (purchase.equalsIgnoreCase("Logitech MX Master 3S")) {
+                                      
+                        officeMouse.setAmount(officeMouse.getAmount() + amount);
+                        System.out.println(amount + " items with the following name " + purchase + " were successfully added to cart");
+                        
+                    }
+    
+                    else if (purchase.equalsIgnoreCase("Razer DeathAdder V3 Pro")) {
+               
+                        gamingMouse.setAmount(gamingMouse.getAmount() + amount);
+                        System.out.println(amount + " items with the following name " + purchase + " were successfully added to cart");
+                        
+                    }
+    
+                    else if (purchase.equalsIgnoreCase("Acer Predator Gaming PC")) {
+       
+                        gamingComputer.setAmount(gamingComputer.getAmount() + amount);
+                        System.out.println(amount + " items with the following name " + purchase + " were successfully added to cart");
+                        
+                    }
+    
+                    else if (purchase.equalsIgnoreCase("ASUS - ExpertCenter D500")) {
+            
+                        officeComputer.setAmount(officeComputer.getAmount() + amount);
+                        System.out.println(amount + " items with the following name " + purchase + " were successfully added to cart");
+                   
+                    }
+    
+                    else if (purchase.equalsIgnoreCase("Epson WorkForce Pro WF-3820")) {
+                       
+                        inkJet.setAmount(inkJet.getAmount() + amount);
+                        System.out.println(amount + " items with the following name " + purchase + " were successfully added to cart");
+                        
+                    }
+    
+                    else if (purchase.equalsIgnoreCase("Logitech - Signature K650")) {
+    
+                        officeKeyboard.setAmount(officeKeyboard.getAmount() + amount);
+                        System.out.println(amount + " items with the following name " + purchase + " were successfully added to cart");
+                        
+                    }
+    
+                    else if (purchase.equalsIgnoreCase("Logitech G915 TKL LIGHTSPEED")) {
+     
+                        gamingKeyboard.setAmount(gamingKeyboard.getAmount() + amount);
+                        System.out.println(amount + " items with the following name " + purchase + " were successfully added to cart");
+                        
+                    }
+
+                } else {
+                    System.out.println("Error. Please input a value greater than zero to add item to cart");
+                }
             }
-        }
+            else if (option.equalsIgnoreCase("Remove")) {
+                System.out.println("Here are the following available products:");
+                System.out.println("");
+                for (int i = 0; i < currentCart.size(); i++) {
+                    System.out.println(currentCart.get(i));
+                }
+
+                System.out.println("Which item do you want to remove?: ");
+                String purchase = key.readLine();
+
+                System.out.println("How many would you like to remove: ");
+                int amount = Integer.parseInt(key.readLine());
+
+                if (amount > 0) {
+
+                    if (purchase.equalsIgnoreCase("Surface laptop 4")) {
+                    
+                        if (surfaceLaptop.getAmount() - amount > 0) {
+                            surfaceLaptop.setAmount(surfaceLaptop.getAmount() - amount);
+                        }
+                        System.out.println(amount + " items with the following name " + purchase + " were successfully remove from the cart");
+                        
+                    }
+    
+                    else if (purchase.equalsIgnoreCase("ASUS VivoBook 15")) {
+                        
+                        if (vivoBook.getAmount() - amount > 0) {
+                            vivoBook.setAmount(vivoBook.getAmount() - amount);
+                            System.out.println(amount + " items with the following name " + purchase + " were successfully remove from the cart");
+                        }
+                    }
+    
+                    else if (purchase.equalsIgnoreCase("Logitech MX Master 3S")) {
+                                      
+                        officeMouse.setAmount(officeMouse.getAmount() - amount);
+                        System.out.println(amount + " items with the following name " + purchase + " were successfully remove from the cart");
+                        
+                    }
+    
+                    else if (purchase.equalsIgnoreCase("Razer DeathAdder V3 Pro")) {
+               
+                        gamingMouse.setAmount(gamingMouse.getAmount() - amount);
+                        System.out.println(amount + " items with the following name " + purchase + " were successfully remove from the cart");
+                        
+                    }
+    
+                    else if (purchase.equalsIgnoreCase("Acer Predator Gaming PC")) {
+       
+                        gamingComputer.setAmount(gamingComputer.getAmount() - amount);
+                        System.out.println(amount + " items with the following name " + purchase + " were remove from the cart");
+                        
+                    }
+    
+                    else if (purchase.equalsIgnoreCase("ASUS - ExpertCenter D500")) {
+            
+                        officeComputer.setAmount(officeComputer.getAmount() - amount);
+                        System.out.println(amount + " items with the following name " + purchase + " were remove from the cart");
+                   
+                    }
+    
+                    else if (purchase.equalsIgnoreCase("Epson WorkForce Pro WF-3820")) {
+                       
+                        inkJet.setAmount(inkJet.getAmount() + amount);
+                        System.out.println(amount + " items with the following name " + purchase + " were remove from the cart");
+                        
+                    }
+    
+                    else if (purchase.equalsIgnoreCase("Logitech - Signature K650")) {
+    
+                        officeKeyboard.setAmount(officeKeyboard.getAmount() + amount);
+                        System.out.println(amount + " items with the following name " + purchase + " were remove from the cart");
+                        
+                    }
+    
+                    else if (purchase.equalsIgnoreCase("Logitech G915 TKL LIGHTSPEED")) {
+     
+                        gamingKeyboard.setAmount(gamingKeyboard.getAmount() + amount);
+                        System.out.println(amount + " items with the following name " + purchase + " were remove from the cart");
+                        
+                    }
+
+                } else {
+                    System.out.println("Error. Please input a value greater than zero to add item to cart");
+                }
+            }
+        }    
 
 
 
