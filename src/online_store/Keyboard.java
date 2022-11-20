@@ -14,4 +14,8 @@ public class Keyboard extends Products {
         return sizePercentage;
     }
 
+    public String getLayout() {
+        return keyboardLayout;
+    }
+
 }
