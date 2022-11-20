@@ -14,4 +14,8 @@ public class GamingKeyboard extends Keyboard {
         return keyswitches;
     }
     
+    public boolean backlitLighting() {
+        return backlitLighting;
+    }
+
  }
