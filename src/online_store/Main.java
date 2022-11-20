@@ -18,27 +18,66 @@ public class Main {
 
         BufferedReader key = new BufferedReader(new InputStreamReader(System.in));
 
+        ArrayList<Products> currentCart = new ArrayList<Products>();
+
+        currentCart.add(surfaceLaptop);
+        currentCart.add(vivoBook);
+        currentCart.add(officeMouse);
+        currentCart.add(gamingMouse);
+        currentCart.add(gamingComputer);
+        currentCart.add(officeComputer);
+        currentCart.add(inkJet);
+        currentCart.add(officeKeyboard);
+        currentCart.add(gamingKeyboard);
+
+        int totalCost = 0;
+        int totalItems = 0;
+
         System.out.println("---------- WorstSell Online Store ----------");
         System.out.println("To proceed, enter the follow information");
-        System.out.println("First name: ");
-        String name = key.readLine();
+        System.out.print("First name: ");
+        String firstName = key.readLine();
 
-        System.out.println("Last name: ");
+        System.out.print("Last name: ");
+        String lastName = key.readLine();
 
         System.out.println("---------- Shipping Address ----------");
-        System.out.println("Street/house number: ");
-        String streetNumber = key.readLine();
+        System.out.print("Street/house number: ");
+        int streetNumber = Integer.parseInt(key.readLine());
 
-        System.out.println("Street name: ");
+        System.out.print("Street name: ");
         String streetName = key.readLine();
 
-        System.out.println("City: ");
+        System.out.print("City: ");
         String city = key.readLine();
 
-        System.out.println("Province (abbreviation): ");
+        System.out.print("Province (abbreviation): ");
         String province = key.readLine();
 
+        // clear console
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
 
+        Customer newCustomer = new Customer(firstName, lastName, new Address(streetNumber, streetName, city, province), new ShoppingCart(totalItems, totalCost, currentCart));
+
+        System.out.println("---------- Welcome to the Online Shopping Interface ----------");
+        System.out.println("Here are the following actions: ");
+        System.out.println("1. Buy: Browse the online store to purchase items \n2. Remove: remove an item from your cart \n3. Check cart: Review your current cart \n4: Product Info: Get information about the desired product \n5. Checkout: Finish shopping");
+
+        while (true) {
+            System.out.print("Enter option: ");
+            String option = key.readLine();
+
+            if (option.equalsIgnoreCase("Buy")) {
+                System.out.println("Here are the follow products:");
+                System.out.println("");
+                for (int i = 0; i < currentCart.size(); i++) {
+                    System.out.println(currentCart.get(i));
+                }
+
+                 
+            }
+        }
 
 
 
