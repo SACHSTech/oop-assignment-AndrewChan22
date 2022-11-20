@@ -12,4 +12,8 @@ public class Address {
         this.province = province;
     }
 
+    public String toString() {
+        return houseNumber + " " + streetName + ", " + city + ", " + province;
+    }
+
 }
