@@ -2,6 +2,9 @@ package online_store;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.time.LocalDate;
+import java.text.DecimalFormat;
+
 public class Main {
 
     public static void main(String[] args) throws IOException {
@@ -17,7 +20,7 @@ public class Main {
         Keyboard gamingKeyboard = new GamingKeyboard(199.99, "Logitech G915 TKL LIGHTSPEED", 0, 80, "English", "GL Tactile switch", true);
 
         BufferedReader key = new BufferedReader(new InputStreamReader(System.in));
-
+        DecimalFormat formatter = new DecimalFormat("#0.00");  
         ArrayList<Products> currentCart = new ArrayList<Products>();
 
         currentCart.add(surfaceLaptop);
@@ -30,7 +33,7 @@ public class Main {
         currentCart.add(officeKeyboard);
         currentCart.add(gamingKeyboard);
 
-        int totalCost = 0;
+        double totalCost = 0;
         int totalItems = 0;
 
         System.out.println("---------- WorstSell Online Store ----------");
@@ -62,23 +65,25 @@ public class Main {
 
         System.out.println("---------- Welcome to the Online Shopping Interface ----------");
         System.out.println("Here are the following actions: ");
-        System.out.println("1. Buy: Browse the online store to purchase items \n2. Remove: remove an item from your cart \n3. Check cart: Review your current cart \n4: Product Info: Get information about the desired product \n5. Checkout: Finish shopping");
+    
 
         while (true) {
+            System.out.println("1. Buy: Browse the online store to purchase items \n2. Remove: remove an item from your cart \n3. Check cart: Review your current cart \n4: Product Info: Get information about the desired product \n5. Checkout: Finish shopping");A
             System.out.print("Enter option: ");
             String option = key.readLine();
 
             if (option.equalsIgnoreCase("Buy")) {
-                System.out.println("Here are the following available products:");
                 System.out.println("");
+                System.out.println("Here are the following available products:");
                 for (int i = 0; i < currentCart.size(); i++) {
                     System.out.println(currentCart.get(i));
                 }
 
-                System.out.println("What are you looking to purchase?: ");
+                System.out.println("");
+                System.out.print("What are you looking to purchase?: ");
                 String purchase = key.readLine();
 
-                System.out.println("How many would you like to purchase?: ");
+                System.out.print("How many would you like to purchase?: ");
                 int amount = Integer.parseInt(key.readLine());
 
                 if (amount > 0) {
@@ -287,10 +292,89 @@ public class Main {
                         tempCost += currentCart.get(i).getAmount() * currentCart.get(i).getPrice();
                     }
                 }
-                System.out.println("Total cost: " + tempCost);
+                System.out.println("Total current cost of cart: $" + formatter.format(tempCost));
             }
             
+            else if (option.equalsIgnoreCase("Product info")) {
+                System.out.println("Here are the following available products: ");
+                System.out.println("");
+                for (int i = 0; i < currentCart.size(); i++) {
+                    System.out.println(currentCart.get(i));
+                }
+
+                System.out.println("Which product do you want to learn more about?");
+                String choice = key.readLine();
+
+                if (choice.equalsIgnoreCase("Surface laptop 4")) {
+                    
+                    surfaceLaptop.getFeatures();
+                        
+                }
+    
+                else if (choice.equalsIgnoreCase("ASUS VivoBook 15")) {
+                    
+                    vivoBook.getFeatures();
+                }
+
+                else if (choice.equalsIgnoreCase("Logitech MX Master 3S")) {
+                        
+                    officeMouse.getFeatures();
+                }
+
+                else if (choice.equalsIgnoreCase("Razer DeathAdder V3 Pro")) {
             
+                    gamingMouse.getFeatures();
+                }
+
+                else if (choice.equalsIgnoreCase("Acer Predator Gaming PC")) {
+    
+                    gamingComputer.getFeatures();
+                    
+                }
+
+                else if (choice.equalsIgnoreCase("ASUS - ExpertCenter D500")) {
+        
+                    officeComputer.getFeatures();
+                }
+
+                else if (choice.equalsIgnoreCase("Epson WorkForce Pro WF-3820")) {
+                    
+                    inkJet.getFeatures();
+                }
+
+                else if (choice.equalsIgnoreCase("Logitech - Signature K650")) {
+
+                    officeKeyboard.getFeatures();
+                }
+
+                else if (choice.equalsIgnoreCase("Logitech G915 TKL LIGHTSPEED")) {
+    
+                    gamingKeyboard.getFeatures();
+                }
+
+            }
+
+            else if (option.equalsIgnoreCase("Checkout")) {
+                for (int i = 0; i < currentCart.size(); i++) {
+                    if (currentCart.get(i).getAmount() > 0) {
+                        System.out.println(currentCart.get(i).getName() + ": " + currentCart.get(i).getAmount());
+
+                        totalCost += currentCart.get(i).getAmount() * currentCart.get(i).getPrice();
+                    }
+                }
+                System.out.println("Total current cost of cart: $" + formatter.format(totalCost));
+                
+                LocalDate currentDate = LocalDate.now();
+                LocalDate estimatedDelivery = currentDate.plusDays(7);
+
+                System.out.println("-----Shipping Location-----");
+
+                System.out.println("WorstSell thanks you for your purchase " +  newCustomer.getFirstName() + ". \nShipping Destination: " + newCustomer.getAddress() + "\nEstimated delivery date: " + estimatedDelivery );
+
+            }
+            else {
+                System.out.println("Please choose a valid option");
+            }
         }
     }    
 
