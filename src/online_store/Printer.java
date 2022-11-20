@@ -3,7 +3,7 @@ package online_store;
 public class Printer extends Products {
     private String type;
 
-    public Printer(double price, String productName, int amount) {
+    public Printer(double price, String productName, int amount, String type) {
         super(price, productName, amount);
         this.type = type;
     }
