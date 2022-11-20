@@ -12,4 +12,9 @@ public class Products {
         this.amount = amount;
     }
 
+    public double getPrice() {
+        return price;
+    }
+
+
 }
