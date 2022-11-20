@@ -13,5 +13,8 @@ public class Laptop extends PersonalComputer {
         this.weight = weight;
     }
     
-    
+    public boolean getWebcam() {
+        return hasWebcam;
+    }
+
 }
