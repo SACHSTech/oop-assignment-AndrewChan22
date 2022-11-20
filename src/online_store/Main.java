@@ -68,7 +68,7 @@ public class Main {
     
 
         while (true) {
-            System.out.println("1. Buy: Browse the online store to purchase items \n2. Remove: remove an item from your cart \n3. Check cart: Review your current cart \n4: Product Info: Get information about the desired product \n5. Checkout: Finish shopping");A
+            System.out.println("1. Buy: Browse the online store to purchase items \n2. Remove: remove an item from your cart \n3. Check cart: Review your current cart \n4: Product Info: Get information about the desired product \n5. Checkout: Finish shopping");
             System.out.print("Enter option: ");
             String option = key.readLine();
 
