@@ -1,6 +1,6 @@
 package online_store;
 
-public class Products {
+public abstract class Products {
 
     private double price;
     private String productName;
@@ -27,4 +27,6 @@ public class Products {
     public void setAmount(int newAmount) {
         this.amount = newAmount;
     }
+
+    public abstract void getFeatures();
 }
