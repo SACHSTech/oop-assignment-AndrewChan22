@@ -44,7 +44,7 @@ public class GamingKeyboard extends Keyboard {
      * @return backlitLighting
      * @author A. Chan
      */
-    public boolean backlitLighting() {
+    public boolean getBacklitLighting() {
         return backlitLighting;
     }
 
