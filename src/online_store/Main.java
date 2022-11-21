@@ -5,10 +5,15 @@ import java.util.ArrayList;
 import java.time.LocalDate;
 import java.text.DecimalFormat;
 
+/**
+ * Main program to run online store
+ * @author A. Chan
+ */
 public class Main {
 
     public static void main(String[] args) throws IOException {
         
+        // make objects
         Laptop surfaceLaptop = new Laptop(1099, "Surface Laptop 4", 0, "Quad Core 11th Gen Intel® Core™ i5-1135G7 processor", 256, 8, true, true, 2.79);
         Laptop vivoBook = new Laptop(799.99, "ASUS VivoBook 15", 0, "Intel Core i5-1135G7", 1000, 16, true, false, 3.53);
         Mouse officeMouse = new Mouse(25, "Logitech MX Master 3S", 0, true, true, "Small");
@@ -19,10 +24,12 @@ public class Main {
         Keyboard officeKeyboard = new Keyboard(49.99, "Logitech - Signature K650", 0, 100, "English (QWERTY)");
         Keyboard gamingKeyboard = new GamingKeyboard(199.99, "Logitech G915 TKL LIGHTSPEED", 0, 80, "English", "GL Tactile switch", true);
 
+        // user input, decimal formatter, and product arraylist
         BufferedReader key = new BufferedReader(new InputStreamReader(System.in));
         DecimalFormat formatter = new DecimalFormat("#0.00");  
         ArrayList<Products> currentCart = new ArrayList<Products>();
 
+        // add objects to cart
         currentCart.add(surfaceLaptop);
         currentCart.add(vivoBook);
         currentCart.add(officeMouse);
@@ -33,9 +40,11 @@ public class Main {
         currentCart.add(officeKeyboard);
         currentCart.add(gamingKeyboard);
 
+        // initialize cart variables
         double totalCost = 0;
         int totalItems = 0;
 
+        // user input to create customer object
         System.out.println("---------- Online Store ----------");
         System.out.println("To proceed, enter the follow information");
         System.out.print("First name: ");
@@ -61,24 +70,29 @@ public class Main {
         System.out.print("\033[H\033[2J");
         System.out.flush();
 
+        // make customer object using user input
         Customer newCustomer = new Customer(firstName, lastName, new Address(streetNumber, streetName, city, province), new ShoppingCart(totalItems, totalCost, currentCart));
 
         System.out.println("---------- Welcome to the Online Shopping Interface ----------");
         System.out.println("Here are the following actions: ");
     
-
+        // loops until customer checks out
         while (true) {
             System.out.println("1. Buy: Browse the online store to purchase items \n2. Remove: remove an item from your cart \n3. Check cart: Review your current cart \n4: Product Info: Get information about the desired product \n5. Checkout: Finish shopping");
             System.out.print("Enter option: ");
             String option = key.readLine();
 
+            // buy option, allows customer to add items to cart based on user input
             if (option.equalsIgnoreCase("Buy")) {
                 System.out.println("");
                 System.out.println("Here are the following available products:");
+
+                // output product objects
                 for (int i = 0; i < currentCart.size(); i++) {
                     System.out.println(currentCart.get(i));
                 }
 
+                // product and amount user input
                 System.out.println("");
                 System.out.print("What are you looking to purchase?: ");
                 String purchase = key.readLine();
@@ -154,6 +168,8 @@ public class Main {
                     System.out.println("Error. Please input a value greater than zero to add item to cart");
                 }
             }
+
+            // remove option, allows customer to remove items from their cart
             else if (option.equalsIgnoreCase("Remove")) {
                 System.out.println("Here are the following available products:");
                 System.out.println("");
@@ -283,8 +299,12 @@ public class Main {
                 }
             } 
             
+            // outputs current items in cart
             else if (option.equalsIgnoreCase("Check cart")) {
+                // temporary cost variable
                 int tempCost = 0;
+
+                // loop through arraylist, and add item prices to the cart
                 for (int i = 0; i < currentCart.size(); i++) {
                     if (currentCart.get(i).getAmount() > 0) {
                         System.out.println(currentCart.get(i).getName() + ": " + currentCart.get(i).getAmount());
@@ -295,6 +315,7 @@ public class Main {
                 System.out.println("Total current cost of cart: $" + formatter.format(tempCost));
             }
             
+            // product info option, outputs getFeatures() of the desired product
             else if (option.equalsIgnoreCase("Product info")) {
                 System.out.println("Here are the following available products: ");
                 System.out.println("");
@@ -354,6 +375,7 @@ public class Main {
 
             }
 
+            // checkout option, totals all products in the cart, creates delivery date, and outputs shipping destination of customer
             else if (option.equalsIgnoreCase("Checkout")) {
                 for (int i = 0; i < currentCart.size(); i++) {
                     if (currentCart.get(i).getAmount() > 0) {
@@ -370,7 +392,7 @@ public class Main {
                 System.out.println("-----Shipping Location-----");
 
                 System.out.println("Thank you for your purchase " +  newCustomer.getFirstName() + "! \nShipping Destination: " + newCustomer.getAddress() + "\nEstimated delivery date: " + estimatedDelivery );
-
+                break;
             }
             else {
                 System.out.println("Please choose a valid option");
