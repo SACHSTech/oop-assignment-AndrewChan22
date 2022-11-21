@@ -36,7 +36,7 @@ public class Main {
         double totalCost = 0;
         int totalItems = 0;
 
-        System.out.println("---------- WorstSell Online Store ----------");
+        System.out.println("---------- Online Store ----------");
         System.out.println("To proceed, enter the follow information");
         System.out.print("First name: ");
         String firstName = key.readLine();
@@ -173,7 +173,7 @@ public class Main {
                     
                         if (surfaceLaptop.getAmount() - amount >= 0) {
                             surfaceLaptop.setAmount(surfaceLaptop.getAmount() - amount);
-                            System.out.println(amount + " item(s) with the following name " + purchase + " were successfully remove from the cart");
+                            System.out.println(amount + " item(s) with the following name " + purchase + " were successfully removed from the cart");
                         }
                         else {
                             System.out.println("Invalid amount.");
@@ -186,7 +186,7 @@ public class Main {
                         
                         if (vivoBook.getAmount() - amount >= 0) {
                             vivoBook.setAmount(vivoBook.getAmount() - amount);
-                            System.out.println(amount + " item(s) with the following name " + purchase + " were successfully remove from the cart");
+                            System.out.println(amount + " item(s) with the following name " + purchase + " were successfully removed from the cart");
                         }
                         else {
                             System.out.println("Invalid amount.");
@@ -197,7 +197,7 @@ public class Main {
                            
                         if (officeMouse.getAmount() - amount >= 0) {
                             officeMouse.setAmount(officeMouse.getAmount() - amount);
-                            System.out.println(amount + " item(s) with the following name " + purchase + " were successfully remove from the cart");
+                            System.out.println(amount + " item(s) with the following name " + purchase + " were successfully removed from the cart");
                         }
                         else {
                             System.out.println("Invalid amount.");
@@ -211,7 +211,7 @@ public class Main {
                
                         if (gamingMouse.getAmount() - amount >= 0) {
                             gamingMouse.setAmount(gamingMouse.getAmount() - amount);
-                            System.out.println(amount + " item(s) with the following name " + purchase + " were successfully remove from the cart");
+                            System.out.println(amount + " item(s) with the following name " + purchase + " were successfully removed from the cart");
                         }
                         else {
                             System.out.println("Invalid amount.");
@@ -369,7 +369,7 @@ public class Main {
 
                 System.out.println("-----Shipping Location-----");
 
-                System.out.println("WorstSell thanks you for your purchase " +  newCustomer.getFirstName() + ". \nShipping Destination: " + newCustomer.getAddress() + "\nEstimated delivery date: " + estimatedDelivery );
+                System.out.println("Thank you for your purchase " +  newCustomer.getFirstName() + "! \nShipping Destination: " + newCustomer.getAddress() + "\nEstimated delivery date: " + estimatedDelivery );
 
             }
             else {
