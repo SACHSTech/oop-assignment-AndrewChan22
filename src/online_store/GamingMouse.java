@@ -1,11 +1,29 @@
 package online_store;
 
+/**
+ * GamingMouse subclass
+ * @author A. Chan
+ */
 public class GamingMouse extends Mouse {
     
+    // instance variables
     private double dotsPerInch;
     private boolean RGB;
     private int programmableButtons;
 
+    /**
+     * GamingMouse constructor
+     * 
+     * @param price price of mouse
+     * @param productName name of mouse
+     * @param amount amount of mouse
+     * @param isWireless wireless mouse
+     * @param isErgonomic ergonomic mouse
+     * @param size size of mouse
+     * @param dotsPerInch DPI of of mouse
+     * @param RGB whether mouse if RGB
+     * @param programmableButtons number of programmable buttons
+     */
     public GamingMouse (double price, String productName, int amount, boolean isWireless, boolean isErgonomic, String size, double dotsPerInch, boolean RGB, int programmableButtons) {
         super(price, productName, amount, isWireless, isErgonomic, size);
 
@@ -14,14 +32,31 @@ public class GamingMouse extends Mouse {
         this.programmableButtons = programmableButtons;
     }
 
+    /**
+     * Return DPI
+     * 
+     * @return dpi of mouse
+     * @author A. Chan
+     */
     public double getDPI() {
         return dotsPerInch;
     }
 
+    /**
+     * RGB mouse
+     * 
+     * @return hasRGB
+     * @author A. Chan
+     */
     public boolean getRGB() {
         return RGB;
     }
 
+    /**
+     * Outputs features to the screen
+     * 
+     * @author A. Chan
+     */
     public void showFeatures() {
 
         super.showFeatures();
