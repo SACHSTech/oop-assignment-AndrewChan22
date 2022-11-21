@@ -23,6 +23,8 @@ public class GamingMouse extends Mouse {
     }
 
     public void getFeatures() {
+
+        super.getFeatures();
         System.out.println(dotsPerInch + " DPI delivers pro-level accuracy and speed");
         System.out.println(programmableButtons + " individually programmable buttons customize functions and store your preferred settings");
 

@@ -19,6 +19,7 @@ public class GamingKeyboard extends Keyboard {
     }
 
     public void getFeatures() {
+        super.getFeatures();
         System.out.println("Mechanical keyswitches: " + keyswitches);
         if (backlitLighting) {
             System.out.println("This keyboard has vibrant RGB backlighting");

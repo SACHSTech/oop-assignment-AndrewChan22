@@ -19,6 +19,8 @@ public class Desktop extends PersonalComputer {
     }
 
     public void getFeatures() {
+
+        super.getFeatures();
         System.out.println("Graphics card: " + graphicsCard);
         
         if(prebuilt) {

@@ -26,6 +26,9 @@ public class Laptop extends PersonalComputer {
     }
 
     public void getFeatures() {
+
+        super.getFeatures();
+        
         if (hasWebcam) {
             System.out.println("This laptop has a webcam");
         } else {

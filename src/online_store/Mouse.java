@@ -25,6 +25,7 @@ public class Mouse extends Products{
     }
 
     public void getFeatures() {
+        
         System.out.println("Size of Mouse: " + size);
 
         if (isErgonomic) {
