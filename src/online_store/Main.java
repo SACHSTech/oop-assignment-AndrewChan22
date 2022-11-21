@@ -315,7 +315,7 @@ public class Main {
                 System.out.println("Total current cost of cart: $" + formatter.format(tempCost));
             }
             
-            // product info option, outputs getFeatures() of the desired product
+            // product info option, outputs showFeatures() of the desired product
             else if (option.equalsIgnoreCase("Product info")) {
                 System.out.println("Here are the following available products: ");
                 System.out.println("");
@@ -328,49 +328,49 @@ public class Main {
 
                 if (choice.equalsIgnoreCase("Surface laptop 4")) {
                     
-                    surfaceLaptop.getFeatures();
+                    surfaceLaptop.showFeatures();
                         
                 }
     
                 else if (choice.equalsIgnoreCase("ASUS VivoBook 15")) {
                     
-                    vivoBook.getFeatures();
+                    vivoBook.showFeatures();
                 }
 
                 else if (choice.equalsIgnoreCase("Logitech MX Master 3S")) {
                         
-                    officeMouse.getFeatures();
+                    officeMouse.showFeatures();
                 }
 
                 else if (choice.equalsIgnoreCase("Razer DeathAdder V3 Pro")) {
             
-                    gamingMouse.getFeatures();
+                    gamingMouse.showFeatures();
                 }
 
                 else if (choice.equalsIgnoreCase("Acer Predator Gaming PC")) {
     
-                    gamingComputer.getFeatures();
+                    gamingComputer.showFeatures();
                     
                 }
 
                 else if (choice.equalsIgnoreCase("ASUS - ExpertCenter D500")) {
         
-                    officeComputer.getFeatures();
+                    officeComputer.showFeatures();
                 }
 
                 else if (choice.equalsIgnoreCase("Epson WorkForce Pro WF-3820")) {
                     
-                    inkJet.getFeatures();
+                    inkJet.showFeatures();
                 }
 
                 else if (choice.equalsIgnoreCase("Logitech - Signature K650")) {
 
-                    officeKeyboard.getFeatures();
+                    officeKeyboard.showFeatures();
                 }
 
                 else if (choice.equalsIgnoreCase("Logitech G915 TKL LIGHTSPEED")) {
     
-                    gamingKeyboard.getFeatures();
+                    gamingKeyboard.showFeatures();
                 }
 
             }

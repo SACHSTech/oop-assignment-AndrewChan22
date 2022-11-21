@@ -18,9 +18,9 @@ public class Desktop extends PersonalComputer {
         return prebuilt;
     }
 
-    public void getFeatures() {
+    public void showFeatures() {
 
-        super.getFeatures();
+        super.showFeatures();
         System.out.println("Graphics card: " + graphicsCard);
         
         if(prebuilt) {

@@ -22,9 +22,9 @@ public class GamingMouse extends Mouse {
         return RGB;
     }
 
-    public void getFeatures() {
+    public void showFeatures() {
 
-        super.getFeatures();
+        super.showFeatures();
         System.out.println(dotsPerInch + " DPI delivers pro-level accuracy and speed");
         System.out.println(programmableButtons + " individually programmable buttons customize functions and store your preferred settings");
 

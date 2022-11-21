@@ -12,7 +12,7 @@ public class Printer extends Products {
         return type;
     }
 
-    public void getFeatures() {
+    public void showFeatures() {
         System.out.println("This printer is a " + type);
     }
 }

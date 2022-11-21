@@ -23,7 +23,7 @@ public class PersonalComputer extends Products {
         return storageRAM;
     }
 
-    public void getFeatures() {
+    public void showFeatures() {
         System.out.println("Processor: " + processor);
         if (storageSSD >= 1000) {
             System.out.println((storageSSD/1000) + " TB solid-state drive (SSD)");

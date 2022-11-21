@@ -1,5 +1,8 @@
 package online_store;
 
+/**
+ * Laptop 
+ */
 public class Laptop extends PersonalComputer {
 
     private boolean hasWebcam;
@@ -25,10 +28,10 @@ public class Laptop extends PersonalComputer {
         return weight;
     }
 
-    public void getFeatures() {
+    public void showFeatures() {
 
-        super.getFeatures();
-        
+        super.showFeatures();
+
         if (hasWebcam) {
             System.out.println("This laptop has a webcam");
         } else {

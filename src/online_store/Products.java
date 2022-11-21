@@ -32,5 +32,5 @@ public abstract class Products {
         return productName + ": $" + price;
     }
 
-    public abstract void getFeatures();
+    public abstract void showFeatures();
 }

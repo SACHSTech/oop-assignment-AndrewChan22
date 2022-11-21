@@ -18,7 +18,7 @@ public class Keyboard extends Products {
         return keyboardLayout;
     }
 
-    public void getFeatures() {
+    public void showFeatures() {
         if (sizePercentage == 100) {
             System.out.println("Size: full-sized (100%)");
         } 
