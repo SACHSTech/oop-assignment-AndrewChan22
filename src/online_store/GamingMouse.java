@@ -59,7 +59,24 @@ public class GamingMouse extends Mouse {
      */
     public void showFeatures() {
 
-        super.showFeatures();
+        System.out.println("");
+        System.out.println("Name: " + getName());
+        System.out.println("Price: " + getPrice());
+
+        System.out.println("---Product Specifications---");
+
+        System.out.println("Size of Mouse: " + getSize());
+
+        if (getIsErgonomic()) {
+            System.out.println("This mouse is ergonomic");
+        }
+
+        if (getIsWireless()) {
+            System.out.println("This mouse is wireless");
+        }
+        else {
+            System.out.println("This mouse is wired");
+        }
         System.out.println(dotsPerInch + " DPI delivers pro-level accuracy and speed");
         System.out.println(programmableButtons + " individually programmable buttons customize functions and store your preferred settings");
 
