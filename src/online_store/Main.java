@@ -323,7 +323,7 @@ public class Main {
                     System.out.println(currentCart.get(i));
                 }
 
-                System.out.println("Which product do you want to learn more about?");
+                System.out.print("Which product do you want to learn more about?");
                 String choice = key.readLine();
 
                 if (choice.equalsIgnoreCase("Surface laptop 4")) {

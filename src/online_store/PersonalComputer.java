@@ -23,6 +23,7 @@ public class PersonalComputer extends Products {
      */
     public PersonalComputer(double price, String productName, int amount, String processor, double storageSSD, double storageRAM) {
         super(price, productName, amount);
+        this.processor = processor;
         this.storageSSD = storageSSD;
         this.storageRAM = storageRAM;
     }
@@ -62,6 +63,11 @@ public class PersonalComputer extends Products {
      * @author A. Chan
      */
     public void showFeatures() {
+        System.out.println("");
+        System.out.println("Name: " + getName());
+        System.out.println("Price: " + getPrice());
+
+        System.out.println("---Product Specifications---");
         System.out.println("Processor: " + processor);
         if (storageSSD >= 1000) {
             System.out.println((storageSSD/1000) + " TB solid-state drive (SSD)");

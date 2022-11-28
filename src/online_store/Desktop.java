@@ -56,7 +56,16 @@ public class Desktop extends PersonalComputer {
      */
     public void showFeatures() {
 
-        super.showFeatures();
+        System.out.println("");
+        System.out.println("Name: " + getName());
+        System.out.println("Price: " + getPrice());
+
+        System.out.println("---Product Specifications---");
+
+        System.out.println("Processor: " + getProcessor());
+        System.out.println("SSD Storage: " + getSSD() + " GB");
+        System.out.println("RAM Storage: " + getRAM() + " GB");
+
         System.out.println("Graphics card: " + graphicsCard);
         
         if(prebuilt) {
