@@ -384,15 +384,23 @@ public class Main {
                         totalCost += currentCart.get(i).getAmount() * currentCart.get(i).getPrice();
                     }
                 }
-                System.out.println("Total current cost of cart: $" + formatter.format(totalCost));
+
+                if (totalCost == 0) {
+                    System.out.println("Your cart is currently empty! Unable to checkout");
+                }
+
+                else {
+                    System.out.println("Total current cost of cart: $" + formatter.format(totalCost));
                 
-                LocalDate currentDate = LocalDate.now();
-                LocalDate estimatedDelivery = currentDate.plusDays(7);
-
-                System.out.println("-----Shipping Location-----");
-
-                System.out.println("Thank you for your purchase " +  newCustomer.getFirstName() + "! \nShipping Destination: " + newCustomer.getAddress() + "\nEstimated delivery date: " + estimatedDelivery );
-                break;
+                    LocalDate currentDate = LocalDate.now();
+                    LocalDate estimatedDelivery = currentDate.plusDays(7);
+    
+                    System.out.println("-----Shipping Location-----");
+    
+                    System.out.println("Thank you for your purchase " +  newCustomer.getFirstName() + "! \nShipping Destination: " + newCustomer.getAddress() + "\nEstimated delivery date: " + estimatedDelivery );
+                    break;
+                }
+            
             }
             else {
                 System.out.println("Please choose a valid option");
