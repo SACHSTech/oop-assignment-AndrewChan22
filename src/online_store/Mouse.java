@@ -68,10 +68,10 @@ public class Mouse extends Products{
 
         System.out.println("");
         System.out.println("Name: " + getName());
-        System.out.println("Price: " + getPrice());
+        System.out.println("Price: $" + getPrice());
 
         System.out.println("---Product Specifications---");
-        
+
         System.out.println("Size of Mouse: " + size);
 
         if (isErgonomic) {

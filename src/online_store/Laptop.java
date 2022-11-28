@@ -70,14 +70,14 @@ public class Laptop extends PersonalComputer {
 
         System.out.println("");
         System.out.println("Name: " + getName());
-        System.out.println("Price: " + getPrice());
+        System.out.println("Price: $" + getPrice());
 
         System.out.println("---Product Specifications---");
 
         System.out.println("Processor: " + getProcessor());
         System.out.println("SSD Storage: " + getSSD() + " GB");
         System.out.println("RAM Storage: " + getRAM() + " GB");
-        
+
         if (hasWebcam) {
             System.out.println("This laptop has a webcam");
         } else {

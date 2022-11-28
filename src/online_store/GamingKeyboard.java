@@ -54,7 +54,31 @@ public class GamingKeyboard extends Keyboard {
      * @author A. Chan
      */
     public void showFeatures() {
-        super.showFeatures();
+        System.out.println("");
+        System.out.println("Name: " + getName());
+        System.out.println("Price: $" + getPrice());
+
+        System.out.println("---Product Specifications---");
+
+        if (getSizePercentage() == 100) {
+            System.out.println("Size: full-sized (100%)");
+        } 
+
+        else if (getSizePercentage() == 96) {
+            System.out.println("Size: compact full-sized (96%)");
+        }
+        else if (getSizePercentage() == 80) {
+            System.out.println("Size: Tenkeyless (80%)");
+        }
+        else if (getSizePercentage() == 65) {
+            System.out.println("Size: Compact (65%)");
+        }
+        else {
+            System.out.println("Size percentage " + getSizePercentage());
+        }
+
+        System.out.println("Keyboard layout " + getLayout());
+
         System.out.println("Mechanical keyswitches: " + keyswitches);
         if (backlitLighting) {
             System.out.println("This keyboard has vibrant RGB backlighting");

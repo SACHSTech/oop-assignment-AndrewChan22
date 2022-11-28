@@ -39,7 +39,7 @@ public class Printer extends Products {
     public void showFeatures() {
         System.out.println("");
         System.out.println("Name: " + getName());
-        System.out.println("Price: " + getPrice());
+        System.out.println("Price: $" + getPrice());
 
         System.out.println("---Product Specifications---");
 
