@@ -37,6 +37,12 @@ public class Printer extends Products {
      * @author A. Chan
      */
     public void showFeatures() {
+        System.out.println("");
+        System.out.println("Name: " + getName());
+        System.out.println("Price: " + getPrice());
+
+        System.out.println("---Product Specifications---");
+
         System.out.println("This printer is a " + type);
     }
 }
